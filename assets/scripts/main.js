@@ -61,7 +61,7 @@ function initializeServiceWorker() {
   //            log that it has failed.
   // STEPS B6 ONWARDS WILL BE IN /sw.js
       try{
-        const registration=await navigator.serviceWorker.register('./sw.js');
+        const registration=await navigator.serviceWorker.register('./sw.js',{scope:"/"});
         if(registration.waiting){
         console.log("Service working successfully registered.");
        }
